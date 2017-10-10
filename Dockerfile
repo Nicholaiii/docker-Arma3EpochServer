@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-MAINTAINER Aaron Clark <http://epochmod.com/>
+MAINTAINER Nicholai Nissen <https://github.com/Nicholaiii/>
 
 ENV DEBIAN_FRONTEND noninteractive
 
