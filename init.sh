@@ -125,21 +125,13 @@ serverCommandPassword = "ShubNiggurath";
 onUserConnected = "";
 onUserDisconnected = "";
 doubleIdDetected = "";
-
-class Missions
-{
-	class Overthrown
-	{
-		template = "OverthrowTanoaMP.Tanoa";
-		difficulty = "custom";
-	};
-};
-
 EOF
 
 
 if [ -f "$FILE" ]; then
-./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty #  -cfg="/arma3/sc/basic.cfg" -autoinit
+  echo "Trying"
+  echo "./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty"
+  ./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty #  -cfg="/arma3/sc/basic.cfg" -autoinit
 else
    echo "Cannot find $FILE"
 fi
