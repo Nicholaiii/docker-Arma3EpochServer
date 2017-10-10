@@ -1,5 +1,4 @@
-## Docker based All-In-One install of Arma 3 Epoch Linux Server (Experimental)
-
+## Docker based All-In-One install of Arma 3 Server
 
 1. First install https://www.docker.com/. 
 
