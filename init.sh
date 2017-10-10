@@ -132,7 +132,7 @@ if [ -f "$FILE" ]; then
   echo "Trying"
   # echo "./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty"
   # ./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty #  -cfg="/arma3/sc/basic.cfg" -autoinit
-    ./arma3server -port=2302 -profiles=/sc "-mod=@cba;@acelgc;@cupweapons;@cupunits;@cupvehicles;@ace3compatcup;@ace3compatrhsusaf;@ace3compatrhsafrf;@overthrow;@rhsafrf;@rhsusaf;@rhsgref;@ace3compatrhsgref" "-serverMod=@advancedslingloading;@advancedrappelling;@urbanrappelling;@advancedtrainsimulator;" -config=/arma3/server.cfg -name=Starlight -world=empty -autoinit
+  ./arma3server -port=2302 -profiles=/sc "-mod=@cba;@acelgc;@cupweapons;@cupunits;@cupvehicles;@ace3compatrhsusaf;@ace3compatrhsafrf;@overthrow;@rhsafrf;@rhsusaf;@rhsgref;@ace3compatrhsgref" "-serverMod=@advancedslingloading;@advancedrappelling;@urbanrappelling;@advancedtrainsimulator;" -config=/arma3/server.cfg -name=Starlight -world=empty
 else
    echo "Cannot find $FILE"
 fi
