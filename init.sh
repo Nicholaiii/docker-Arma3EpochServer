@@ -11,6 +11,12 @@ RCONPASSWORD=${RCONPASSWORD:-changemen0w}
 STEAM_USERNAME=${STEAM_USERNAME:-anonymous}
 STEAM_PASSWORD=${STEAM_PASSWORD:-}
 
+# Install Node
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm install 8
+
 # Base mods
 mods[450814997]='@cba'
 mods[964646083]='@acelgc'
@@ -132,7 +138,8 @@ if [ -f "$FILE" ]; then
   echo "Trying"
   # echo "./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty"
   # ./$FILE -port=2302 -profiles=/sc -mod="$ARMAMODS" -serverMod="$ARMASERVERMODS" -config="/arma3/server.cfg" -name=Starlight -world=empty #  -cfg="/arma3/sc/basic.cfg" -autoinit
-  ./arma3server -port=2302 -profiles=/sc "-mod=@cba;@acelgc;@cupweapons;@cupunits;@cupvehicles;@ace3compatrhsusaf;@ace3compatrhsafrf;@overthrow;@rhsafrf;@rhsusaf;@rhsgref;@ace3compatrhsgref" "-serverMod=@advancedslingloading;@advancedrappelling;@urbanrappelling;@advancedtrainsimulator;" -config=/arma3/server.cfg -name=Starlight -world=empty
+  # ./arma3server -port=2302 -profiles=/sc "-mod=@cba;@acelgc;@cupweapons;@cupunits;@cupvehicles;@ace3compatrhsusaf;@ace3compatrhsafrf;@overthrow;@rhsafrf;@rhsusaf;@rhsgref;@ace3compatrhsgref" "-serverMod=@advancedslingloading;@advancedrappelling;@urbanrappelling;@advancedtrainsimulator;" -config=/arma3/server.cfg -name=Starlight -world=empty
+  node
 else
    echo "Cannot find $FILE"
 fi
