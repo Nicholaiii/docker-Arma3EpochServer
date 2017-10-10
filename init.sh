@@ -89,7 +89,7 @@ do
 	if [ -d "$MODFILE" ]; then
 		# convert to mod to lowercase
 		cd $MODFILE
-		# ls | while read upName; do loName=`echo "${upName}" | tr '[:upper:]' '[:lower:]'`; mv "$upName" "$loName"; done
+		ls | while read upName; do loName=`echo "${upName}" | tr '[:upper:]' '[:lower:]'`; mv "$upName" "$loName"; done
    		# install client mods
 		ln -s $MODFILE $ARMASVRPATH"/"${mods[$i]}
 		# copy latest key to server
@@ -106,9 +106,7 @@ do
 	if [ -d "$MODFILE" ]; then
 		# convert to mod to lowercase
 		cd $MODFILE
-
-
-		# ls | while read upName; do loName=`echo "${upName}" | tr '[:upper:]' '[:lower:]'`; mv "$upName" "$loName"; done
+		ls | while read upName; do loName=`echo "${upName}" | tr '[:upper:]' '[:lower:]'`; mv "$upName" "$loName"; done
 		#install server mods
     ln -s $MODFILE $ARMASVRPATH"/"${servermods[$i]}
 	else
