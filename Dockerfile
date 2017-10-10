@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install dependencies
 RUN apt-get update &&\
-    apt-get install -y wget lib32gcc1 lib32stdc++6 redis-server binutils
+    apt-get install -y wget lib32gcc1 lib32stdc++6 redis-server binutils net-tools
 
 
 ADD init.sh /usr/local/bin/init.sh
