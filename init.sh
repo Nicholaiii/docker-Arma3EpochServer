@@ -20,14 +20,12 @@ fi
 #start redis
 service redis-server start
 
-
 cd /root
 # install steamcmd
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -zxvf steamcmd_linux.tar.gz
 rm -f steamcmd_linux.tar.gz
 cd ..
-
 
 # build mod list
 MODLIST=""
